@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخبار بیت کوین</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tahoma&display=swap');
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .news-card {
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .bitcoin-gradient {
+            background: linear-gradient(135deg, #f7931a 0%, #ff9900 100%);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body style="background-color:#ff0000" class="min-h-screen">
+    <!-- Header -->
+    <header class="bitcoin-gradient text-white py-12 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <i class="fab fa-bitcoin text-5xl mb-4 fade-in"></i>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 fade-in">آخرین اخبار بیت کوین</h1>
+            <p class="text-lg md:text-xl opacity-90 fade-in">به روزترین اطلاعات و تحلیل‌های بازار بیت کوین</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- News Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- News 1 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://coiniran.com/wp-content/uploads/2017/01/88.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">تحلیل بازار</span>
+                        <span class="text-xs text-gray-500">2 ساعت پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">بیت کوین به سطح مقاومت کلیدی رسید</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+                        قیمت بیت کوین پس از رشد 15 درصدی در هفته گذشته، به سطح مقاومت مهم 70,000 دلاری رسیده است. تحلیلگران پیش‌بینی می‌کنند در صورت شکست این سطح، رشد قیمت ادامه خواهد یافت.
+                    </p>
+                </div>
+            </div>
+			
+			
+			<!-- News 2 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://www.mydigipay.com/mag/wp-content/uploads/2024/10/crypto-bitcoin.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">جهانی</span>
+                        <span class="text-xs text-gray-500">3 روز پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">بیتکوین چیست؟</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+					بیت کوین (bitcoin) با نماد BTC پول دیجیتالی است که به‌صورت غیرمتمرکز در بستر بلاک‌چین وجود دارد. نشر، نقل و انتقال و همه تراکنش‌های بیت کوین به‌صورت غیرمتمرکز در همان بلاک‌چین انجام و ثبت می‌شود. در حقیقت بلاک‌چین بیت کوین مانند دفتر کل بانک عمل می‌کند با این تفاوت که عملکرد آن غیرمتمرکز و شفاف است و هرکسی می‌تواند نسخه‌ای از آن را داشته باشد.
+                    </p>
+                </div>
+            </div>
+			
+			
+            <!-- News 3 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://arzex.io/wp-content/uploads/2022/08/bitcoin-btc-hash-ribbon-indicator-prints-rare-bullish-signal.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">مقررات گذاری</span>
+                        <span class="text-xs text-gray-500">3 روز پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">تصویب قانون جدید برای بیت کوین در اتحادیه اروپا</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+                        پارلمان اروپا قانون جدیدی را تصویب کرده که به موجب آن تمام تراکنش‌های بیت کوین بالای 1000 یورو باید احراز هویت شوند. این قانون از سال آینده اجرایی خواهد شد.
+                    </p>
+                </div>
+            </div>
+
+            <!-- News 4 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://mag.mizbanfa.net/wp-content/uploads/2018/05/what-is-bitcoin-main-780x405.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">فناوری</span>
+                        <span class="text-xs text-gray-500">4 روز پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">به‌روزرسانی جدید شبکه لایتنینگ بیت کوین</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+                        توسعه‌دهندگان اصلی بیت کوین نسخه 0.15 شبکه لایتنینگ را منتشر کردند که شامل بهبودهای قابل توجهی در سرعت و امنیت تراکنش‌های کوچک است.
+                    </p>
+                </div>
+            </div>
+
+            <!-- News 5 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://cdn.arz.digital/p/tBImq2UXkXcUQqMlrrk8XRlxfY3rOpQt4Pt0c_ZppoM/rs:fit:1200/q:80/g:ce/czM6Ly9hZC1jbnQvbWFpbi8yMDI1LzA1L2ZyZWVwaWtfX2VuaGFuY2VfXzE5Mzg4LmpwZWc.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">کیف پول</span>
+                        <span class="text-xs text-gray-500">5 روز پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">معرفی کیف پول سخت‌افزاری جدید با امنیت بالا</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+                        شرکت لجر از جدیدترین نسخه کیف پول سخت‌افزاری خود با قابلیت پشتیبانی از بیش از 1000 ارز دیجیتال و سیستم احراز هویت پیشرفته رونمایی کرد.
+                    </p>
+                </div>
+            </div>
+
+            <!-- News 6 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://cdn2.tala.ir/content/thumb/tumbnail800x450/content/post-img/202403/169827-929759.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">جهانی</span>
+                        <span class="text-xs text-gray-500">1 هفته پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">کشور جدید به لیست پذیرندگان بیت کوین پیوست</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+                        السالوادور اعلام کرد که از این پس مالیات بر درآمد را نیز می‌توان با بیت کوین پرداخت کرد. این اقدام پس از پذیرش بیت کوین به عنوان پول رسمی در این کشور انجام شده است.
+                    </p>
+                </div>
+            </div>
+			
+			
+			<!-- News 7 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://media.khabaronline.ir/d/2021/12/29/3/5643213.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">جهانی</span>
+                        <span class="text-xs text-gray-500">5 ساعت پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">جزعیات تازه از کشف هویت ساتوشی,ساتوشی کیست؟</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+					به گزارش خبرگزاری خبرآنلاین، در پایان آگوست ۲۰۱۹، یک آژانس بازاریابی و روابط عمومی بیانیه‌ای مطبوعاتی منتشر کرد که در آن مردی از پاکستان که ادعا می‌کرد بیت‌کوین را اختراع کرده بود نشان می‌داد. در حالی که بلال خالد پاکستانی هیچ مدرکی ارائه نکرد، مؤسس آژانس روابط عمومی اخیراً کتابی به نام «پیدا کردن ساتوشی: داستان واقعی پشت خالق مرموز بیت کوین ساتوشی ناکاموتو» منتشر کرده است.
+                    </p>
+                </div>
+            </div>
+			
+			
+			<!-- News 8 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://cdn.arz.digital/p/-joHaXYHPL-xl5IWAhPhogEj1xCo7w-OWo6Bs-jyzQE/rs:fit:336:208/q:80/g:ce/czM6Ly9hZC1jbnQvbWFpbi8yMDIzLzExLyVEOCVBNyVEOSU4NiVEOSU4MSVEOCVBQyVEOCVBNyVEOCVCMS0lRDglQTglREIlOEMlRDglQUEtJURBJUE5JUQ5JTg4JURCJThDJUQ5JTg2LmpwZw.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">جهانی</span>
+                        <span class="text-xs text-gray-500">1 هفته پیش</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">لحظه شماری انفجار بیتکوین</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+					با توجه به شرایطی که ویروس کرونا برای بازار سهام های آسیایی و سرمایه داران ایجاد کرده است ترس از این ویروس سرمایه داران را هر چه بیشتر به سمت ارزهای دیجیتال سوق می دهد و احتمال انفجار ارزش بیت کوین در روزهای آینده بسیار بالا است.
+                    </p>
+                </div>
+            </div>
+			
+			<!-- News 9 -->
+            <div class="news-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    <i>
+					<img src="https://arzinja.info/blog/wp-content/uploads/2020/07/ethereum.jpg"style ="width:400px;height:200px;">
+					</i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-orange-600 font-medium">اخبار جهانی</span>
+                        <span class="text-xs text-gray-500">دیروز</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">پذیرش اتریوم در شرکت های بزرگ افزایش پیدا کرده</h3>
+                    <p class="text-gray-600 text-justify mb-4">
+                        داده‌های CoinShares هم نشان می‌دهد که محصولات سرمایه‌گذاری اتریوم در سطح جهانی هفته گذشته ۳۲۱ میلیون دلار ورودی داشتند. این جریان ورودی قوی‌ترین روند مثبت صندوق‌های مذکور از اواخر دسامبر ۲۰۲۴ تاکنون است.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bitcoin Price Ticker -->
+    </main>
+
+    <!-- Footer -->
+
+    <script>
+        // Simple animation trigger
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transition = 'opacity 0.8s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
