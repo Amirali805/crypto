@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود / ثبت‌نام</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #90d4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .error-message {
+      color: #e11d48;
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+	
+	#particles-js {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      background: #b465fb;
+    }
+
+    .form-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bg-white {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .input-focus-effect:focus {
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .error-message {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+ <div id="particles-js"></div>
+
+  <div class="form-container flex items-center justify-center py-10 px-4">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-md overflow-hidden">
+  <div class="form-switcher bg-white rounded-xl shadow-lg w-full max-w-md overflow-hidden" style= "background-image: radial-gradient(circle, #e27ff6, #c370f2, #8e6bd3, #00879b, #00a5b8);">
+    <div class="bg-violet-600 py-4 px-6">
+      <h1 id="formTitle" class="text-white text-2xl font-bold text-center">ثبت نام در سایت</h1>
+	  <a href="./index.html" class="text-sm text-blue-200 hover:underline block text-center">برگشت به صفحه اصلی</a>
+        <center>
+          <img src="https://cdn.dribbble.com/userupload/21400504/file/original-f48ea41417d7cb30749c82929d584628.gif" style="width:300px;height:150px;">
+        </center>
+    </div>
+    <div class="p-6 space-y-4">
+
+      <!-- فرم ثبت‌نام -->
+      <form id="registerForm" style="display: block;">
+        <input type="text" id="regName" placeholder="نام کامل" required class="form-input" />
+        <input type="email" id="regEmail" placeholder="ایمیل" required class="form-input" />
+        <input type="password" id="regPassword" placeholder="رمز عبور" required class="form-input" />
+        <input type="password" id="regConfirmPassword" placeholder="تکرار رمز عبور" required class="form-input" />
+        <div id="registerError" class="error-message"></div>
+        <button type="submit" class="btn bg-blue-600 text-white w-full">ثبت نام</button>
+      </form>
+
+      <!-- فرم ورود -->
+      <form id="loginForm" style="display: none;">
+        <input type="email" id="loginEmail" placeholder="ایمیل" required class="form-input" />
+        <input type="password" id="loginPassword" placeholder="رمز عبور" required class="form-input" />
+        <div id="loginError" class="error-message"></div>
+        <button type="submit" class="btn bg-green-600 text-white w-full">ورود</button>
+      </form>
+
+      <!-- لینک جابجایی بین فرم‌ها -->
+      <p class="text-center text-sm">
+        <span id="toggleText">قبلاً حساب دارید؟</span>
+        <a href="#" id="toggleForm" class="btn bg-violet-600 text-white w-full">وارد شوید</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const toggleForm = document.getElementById('toggleForm');
+    const toggleText = document.getElementById('toggleText');
+    const formTitle = document.getElementById('formTitle');
+    const registerError = document.getElementById('registerError');
+    const loginError = document.getElementById('loginError');
+
+    // فرم جابجایی
+    toggleForm.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (registerForm.style.display === 'block') {
+        registerForm.style.display = 'none';
+        loginForm.style.display = 'block';
+        toggleText.textContent = 'حساب ندارید؟';
+        toggleForm.textContent = 'ثبت‌نام کنید';
+        formTitle.textContent = 'ورود به سایت';
+      } else {
+        registerForm.style.display = 'block';
+        loginForm.style.display = 'none';
+        toggleText.textContent = 'قبلاً حساب دارید؟';
+        toggleForm.textContent = 'وارد شوید';
+        formTitle.textContent = 'ثبت نام در سایت';
+      }
+    });
+
+    // ارسال ثبت‌نام
+    registerForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      registerError.style.display = 'none';
+
+      const name = document.getElementById('regName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value;
+      const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+      if (password !== confirmPassword) {
+        registerError.textContent = 'رمز عبور و تکرار آن یکسان نیستند.';
+        registerError.style.display = 'block';
+        return;
+      }
+
+      const res = await fetch('register.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      });
+
+      const result = await res.json();
+      if (result.status === 'success') {
+        localStorage.setItem('currentUser', JSON.stringify({ name, email }));
+        window.location.href = 'index.html';
+      } else {
+        registerError.textContent = result.message;
+        registerError.style.display = 'block';
+      }
+    });
+
+    // ارسال ورود
+    loginForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      loginError.style.display = 'none';
+
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      const res = await fetch('login.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      const result = await res.json();
+      if (result.status === 'success') {
+        localStorage.setItem('currentUser', JSON.stringify({ name: result.name, email }));
+		localStorage.setItem('welcomeMessage','true');
+        window.location.href = 'index.html';
+      } else {
+        loginError.textContent = result.message;
+        loginError.style.display = 'block';
+      }
+    });
+  </script>
+  
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 70 },
+        "size": { "value": 3 },
+        "color": { "value": "#e9d5ff" },
+        "move": { "speed": 1 },
+        "line_linked": { "enable": true, "opacity": 0.3 }
+      }
+    });
+  </script>
+</body>
+</html>
